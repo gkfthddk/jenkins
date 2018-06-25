@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 
-                bat 'set'
+                sh 'ls -alh'
             }
         }
     }
