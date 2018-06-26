@@ -16,7 +16,7 @@ pipeline {
         }
         failure {
             echo 'This will run only if failed'
-            echo 'This will run only if failed'| mail -s "run failure" gkfthddk@gate2.sscc.uos.ac.kr
+            sh './mail.sh'
         }
         unstable {
             echo 'This will run only if the run was marked as unstable'
