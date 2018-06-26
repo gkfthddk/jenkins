@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                sh 'ls -lah'
+                sh 'pwd'
                 sh 'echo "Fail!"; exit 1'
             }
         }
