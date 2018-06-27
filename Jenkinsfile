@@ -19,7 +19,10 @@ pipeline {
         }
         failure {
             echo 'This will run only if failed'
-            sh './mail.sh'
+            mail to: 'gkfthddk@gmail.com',
+            subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+            body: "Something is wrong with ${env.BUILD_URL}"
+            #sh './mail.sh'
         }
         unstable {
             echo 'This will run only if the run was marked as unstable'
